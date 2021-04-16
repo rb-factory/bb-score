@@ -18,6 +18,19 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay"/>
+        <MultiAutoCompleteTextView
+                android:text="Locations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_search_location"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <Button
+                android:text="Search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_search_location"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/vertical_layout"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
