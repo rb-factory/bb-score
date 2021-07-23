@@ -1,0 +1,371 @@
+[
+  {
+    "name": "STOKE-ON-TRENT",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "MANUFACTURER"
+      ],
+      [
+        "POTTERY",
+        "IRON_WORK"
+      ],
+      [
+        "MANUFACTURER"
+      ]
+    ]
+  },
+  {
+    "name": "LEEK",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "MANUFACTURER"
+      ],
+      [
+        "COTTON_MILL",
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "BELPER",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "MANUFACTURER"
+      ],
+      [
+        "COAL_MINE"
+      ],
+      [
+        "POTTERY"
+      ]
+    ]
+  },
+  {
+    "name": "DERBY",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "BREWERY"
+      ],
+      [
+        "COTTON_MILL",
+        "MANUFACTURER"
+      ],
+      [
+        "IRON_WORK"
+      ]
+    ]
+  },
+  {
+    "name": "UTTOXETER",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "BREWERY"
+      ],
+      [
+        "COTTON_MILL",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "STONE",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "BREWERY"
+      ],
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "STAFFORD",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "BREWERY"
+      ],
+      [
+        "POTTERY"
+      ]
+    ]
+  },
+  {
+    "name": "CANNOCK",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ],
+      [
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "BURTON-ON-TRENT",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ],
+      [
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "TAMWORTH",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "COAL_MINE"
+      ],
+      [
+        "COTTON_MILL",
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "WALSALL",
+    "slots": [
+      [
+        "IRON_WORK",
+        "MANUFACTURER"
+      ],
+      [
+        "MANUFACTURER",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "WOLVERHAMPTON",
+    "slots": [
+      [
+        "MANUFACTURER"
+      ],
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "COALBROOKDALE",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK"
+      ],
+      [
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "DUDLEY",
+    "slots": [
+      [
+        "COAL_MINE"
+      ],
+      [
+        "IRON_WORK"
+      ]
+    ]
+  },
+  {
+    "name": "BIRMINGHAM",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "MANUFACTURER"
+      ],
+      [
+        "MANUFACTURER"
+      ],
+      [
+        "IRON_WORK"
+      ],
+      [
+        "MANUFACTURER"
+      ]
+    ]
+  },
+  {
+    "name": "NUNEATON",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "BREWERY"
+      ],
+      [
+        "COTTON_MILL",
+        "COAL_MINE"
+      ]
+    ]
+  },
+  {
+    "name": "COVENTRY",
+    "slots": [
+      [
+        "POTTERY"
+      ],
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ],
+      [
+        "IRON_WORK",
+        "MANUFACTURER"
+      ]
+    ]
+  },
+  {
+    "name": "REDDITCH",
+    "slots": [
+      [
+        "MANUFACTURER",
+        "COAL_MINE"
+      ],
+      [
+        "IRON_WORK"
+      ]
+    ]
+  },
+  {
+    "name": "WORCESTER",
+    "slots": [
+      [
+        "COTTON_MILL"
+      ],
+      [
+        "COTTON_MILL"
+      ]
+    ]
+  },
+  {
+    "name": "KIDDERMINSTER",
+    "slots": [
+      [
+        "COTTON_MILL",
+        "COAL_MINE"
+      ],
+      [
+        "COTTON_MILL"
+      ]
+    ]
+  },
+  {
+    "name": "WARRINGTON",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "NOTTINGHAM",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "OXFORD",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "GLOUCESTER",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "SHREWBURY",
+    "slots": [
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ],
+      [
+        "IRON_WORK",
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "FARM1",
+    "slots": [
+      [
+        "BREWERY"
+      ]
+    ]
+  },
+  {
+    "name": "FARM2",
+    "slots": [
+      [
+        "BREWERY"
+      ]
+    ]
+  }
+]

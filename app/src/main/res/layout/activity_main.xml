@@ -12,36 +12,20 @@
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay"/>
-        <MultiAutoCompleteTextView
-                android:text="Locations"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/txt_search_location"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        android:onclick=
         <Button
-                android:text="Search"
+                android:text="Add "
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/btn_search_location"/>
+                android:layout_height="wrap_content" android:id="@+id/btn_addLocation"/>
+        <AutoCompleteTextView
+                android:text="AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/view_search"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" android:id="@+id/vertical_layout"/>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_main"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@android:drawable/ic_dialog_email"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

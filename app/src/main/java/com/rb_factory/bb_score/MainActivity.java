@@ -1,32 +1,66 @@
 package com.rb_factory.bb_score;
 
+import android.os.Build;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import android.view.View;
-
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.*;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import com.rb_factory.bb_score.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.location.Location;
+import org.apache.commons.lang3.StringUtils;
 
-public class MainActivity extends AppCompatActivity {
+@RequiresApi(api = Build.VERSION_CODES.O)
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private Controller controller;
+
+
+    private AutoCompleteTextView searchAutoComplete;
+    private Button btnAdd;
+    private ArrayAdapter<String> searchAdapter;
+
+    private Location currentLocation;
+    private String selectedLocationId = StringUtils.EMPTY;
+
+    private final View.OnClickListener searchOnClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            currentLocation = controller.searchLocation(((EditText) findViewById(R.id.view_search)).getText());
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        controller = new Controller(MainActivity.this);
+        searchAutoComplete = findViewById(R.id.view_search);
+        btnAdd = findViewById(R.id.btn_addLocation);
+        searchAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, controller.getLocations());
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        btnAdd.setOnClickListener(searchOnClick);
+
+        searchAutoComplete.setAdapter(searchAdapter);
+        searchAutoComplete.setOnItemSelectedListener(this);
+    }
+
+    private void buildFacilityLayout(Location location) {
+        LinearLayout vertical = findViewById(R.id.vertical_layout);
+
+
+        for (IndustryFacility industryFacility : location.getIndustryFacilities()) {
+            LinearLayout horizontal = new LinearLayout(this);
+            TextView name = new TextView(this);
+            name.setText(industryFacility.getType().toString());
+            horizontal.addView(name);
+
+
+        }
+        //vertical.addView(horizontal);
+
+
     }
 
     @Override
@@ -49,5 +83,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        selectedLocationId = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

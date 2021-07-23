@@ -6,8 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,10 +18,9 @@ public class JacksonDeserializer<T> implements Deserializer<T> {
     private JavaType genericType;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
+    @Deprecated
     public JacksonDeserializer(File json, Class<T> genericType) {
-        this.jsonContent = readFile(json);
         this.genericType = objectMapper.getTypeFactory().constructCollectionType(List.class, genericType);
-
     }
 
     public JacksonDeserializer(String jsonContent, Class<T> genericType) {
@@ -30,16 +28,25 @@ public class JacksonDeserializer<T> implements Deserializer<T> {
         this.genericType = objectMapper.getTypeFactory().constructCollectionType(List.class, genericType);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private String readFile(File json) {
-        byte[] encoded = new byte[0];
+    public JacksonDeserializer(InputStream inputStream, Class<T> genericType) {
+        this.jsonContent = readFile(inputStream);
+        this.genericType = objectMapper.getTypeFactory().constructCollectionType(List.class, genericType);
+    }
+    
+    private String readFile(InputStream inputStream){
+        String strJSON;
+        StringBuilder buf = new StringBuilder();
         try {
-            encoded = Files.readAllBytes(Paths.get(json.getAbsolutePath()));
-            return new String(encoded, StandardCharsets.US_ASCII);
+            BufferedReader in = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+            while ((strJSON = in.readLine()) != null) {
+                buf.append(strJSON);
+            }
+            in.close();
         } catch (IOException e) {
             e.printStackTrace();
-            return "";
         }
+
+        return buf.toString();
     }
 
     @Override

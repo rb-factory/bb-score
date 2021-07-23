@@ -6,13 +6,14 @@ import com.rb_factory.bb_score.Provider;
 import com.rb_factory.bb_score.deserializer.JacksonDeserializer;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class LinksProvider extends Provider<Link> {
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public LinksProvider(File file) {
+    public LinksProvider(InputStream file) {
         super(new JacksonDeserializer<>(file, Link.class));
     }
 

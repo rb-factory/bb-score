@@ -64,6 +64,10 @@ public class Location {
         return industryFacilities;
     }
 
+    public List<IndustryFacility> industryFacilities(){
+        return null;
+    }
+
     public String getID() {
         return name.toUpperCase();
     }
