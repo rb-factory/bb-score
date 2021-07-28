@@ -2,16 +2,13 @@ package com.rb_factory.bb_score.deserializer;
 
 import com.rb_factory.bb_score.industry_facility.IndustryFacility;
 import com.rb_factory.bb_score.industry_facility.IndustryFacilityType;
-import com.rb_factory.bb_score.industry_facility.IndustryFacilityType.*;
 import com.rb_factory.bb_score.link.Link;
 import com.rb_factory.bb_score.location.Location;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.rb_factory.bb_score.industry_facility.IndustryFacilityType.*;
@@ -40,7 +37,7 @@ class JacksonDeserializerTest {
     @Test
     void testPOJOReturnedAfterIndustryFacilitiesJsonParsed() {
         expected = new IndustryFacility(IndustryFacilityType.MANUFACTURER, 1, 3, 2);
-        assertListFirstELementWithGivenPOJO("IndustryFacility.json", IndustryFacility.class, expected);
+        assertListFirstELementWithGivenPOJO("IndustryFacilities.json", IndustryFacility.class, expected);
     }
 
 

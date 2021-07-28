@@ -7,7 +7,7 @@ import java.util.Map;
 
 public abstract class Provider<T> {
     protected final Deserializer<T> deserializer;
-    private final Map<String, T> map;
+    protected final Map<String, T> map;
 
     public Provider(Deserializer<T> deserializer) {
         this.deserializer = deserializer;

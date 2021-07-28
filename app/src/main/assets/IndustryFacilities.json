@@ -1,0 +1,176 @@
+[
+  {
+    "type": "MANUFACTURER",
+    "level": 1,
+    "basePoint": 3,
+    "linkPoint": 2
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 2,
+    "basePoint": 5,
+    "linkPoint": 1
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 3,
+    "basePoint": 4,
+    "linkPoint": 0
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 4,
+    "basePoint": 3,
+    "linkPoint": 1
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 5,
+    "basePoint": 8,
+    "linkPoint": 2
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 6,
+    "basePoint": 7,
+    "linkPoint": 1
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 7,
+    "basePoint": 9,
+    "linkPoint": 0
+  },
+  {
+    "type": "MANUFACTURER",
+    "level": 8,
+    "basePoint": 11,
+    "linkPoint": 1
+  },
+  {
+    "type": "COTTON_MILL",
+    "level": 1,
+    "basePoint": 5,
+    "linkPoint": 1
+  },
+  {
+    "type": "COTTON_MILL",
+    "level": 2,
+    "basePoint": 5,
+    "linkPoint": 2
+  },
+  {
+    "type": "COTTON_MILL",
+    "level": 3,
+    "basePoint": 9,
+    "linkPoint": 1
+  },
+  {
+    "type": "COTTON_MILL",
+    "level": 4,
+    "basePoint": 12,
+    "linkPoint": 1
+  },
+  {
+    "type": "BREWERY",
+    "level": 1,
+    "basePoint": 4,
+    "linkPoint": 2
+  },
+  {
+    "type": "BREWERY",
+    "level": 2,
+    "basePoint": 5,
+    "linkPoint": 2
+  },
+  {
+    "type": "BREWERY",
+    "level": 3,
+    "basePoint": 7,
+    "linkPoint": 2
+  },
+  {
+    "type": "BREWERY",
+    "level": 4,
+    "basePoint": 10,
+    "linkPoint": 2
+  },
+  {
+    "type": "POTTERY",
+    "level": 1,
+    "basePoint": 10,
+    "linkPoint": 1
+  },
+  {
+    "type": "POTTERY",
+    "level": 2,
+    "basePoint": 1,
+    "linkPoint": 1
+  },
+  {
+    "type": "POTTERY",
+    "level": 3,
+    "basePoint": 11,
+    "linkPoint": 1
+  },
+  {
+    "type": "POTTERY",
+    "level": 4,
+    "basePoint": 1,
+    "linkPoint": 1
+  },
+  {
+    "type": "POTTERY",
+    "level": 5,
+    "basePoint": 20,
+    "linkPoint": 1
+  },
+  {
+    "type": "IRON_WORK",
+    "level": 1,
+    "basePoint": 3,
+    "linkPoint": 1
+  },
+  {
+    "type": "IRON_WORK",
+    "level": 2,
+    "basePoint": 5,
+    "linkPoint": 1
+  },
+  {
+    "type": "IRON_WORK",
+    "level": 3,
+    "basePoint": 7,
+    "linkPoint": 1
+  },
+  {
+    "type": "IRON_WORK",
+    "level": 4,
+    "basePoint": 9,
+    "linkPoint": 1
+  },
+  {
+    "type": "COAL_MINE",
+    "level": 1,
+    "basePoint": 1,
+    "linkPoint": 2
+  },
+  {
+    "type": "COAL_MINE",
+    "level": 2,
+    "basePoint": 2,
+    "linkPoint": 1
+  },
+  {
+    "type": "COAL_MINE",
+    "level": 3,
+    "basePoint": 3,
+    "linkPoint": 1
+  },
+  {
+    "type": "COAL_MINE",
+    "level": 4,
+    "basePoint": 4,
+    "linkPoint": 1
+  }
+]

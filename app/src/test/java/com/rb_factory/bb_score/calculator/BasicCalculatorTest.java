@@ -15,6 +15,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -23,8 +24,8 @@ class BasicCalculatorTest {
 
     private HashMap<String, Location> usedLocations;
     BasicCalculator basicCalculator;
-    private final LocationsProvider locationsProvider = new LocationsProvider(new File("Locations.json"));
-    private final IndustryFacilitiesProvider industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("IndustryFacility.json"));
+    private final LocationsProvider locationsProvider = new LocationsProvider(new FileInputStream("Locations.json"));
+    private final IndustryFacilitiesProvider industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("IndustryFacilities.json"));
 
     @Test
     void whenNullLocationIsGivenThenIllegalArgumentExceptionThrown() {

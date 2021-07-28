@@ -6,6 +6,8 @@ import com.rb_factory.bb_score.industry_facility.IndustryFacilitiesProvider;
 import com.rb_factory.bb_score.location.Location;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -23,12 +25,8 @@ public class BusinessLogic {
         return scores;
     }
 
-    public static void main(String[] args) {
-
-    }
-
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void loadAll(){
+    private void loadAll() throws FileNotFoundException {
         loadIndustryFacilities();
         loadLinks();
         loadLocations();
@@ -48,7 +46,7 @@ public class BusinessLogic {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void loadIndustryFacilities(){
-        this.industryFacilitiesProvider = new IndustryFacilitiesProvider(new File("industry_facilities.json"));
+    private void loadIndustryFacilities() throws FileNotFoundException {
+        this.industryFacilitiesProvider = new IndustryFacilitiesProvider(new FileInputStream(new File("industry_facilities.json")));
     }
 }

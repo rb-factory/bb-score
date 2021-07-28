@@ -5,7 +5,7 @@ import androidx.annotation.RequiresApi;
 import com.rb_factory.bb_score.Provider;
 import com.rb_factory.bb_score.deserializer.JacksonDeserializer;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Map;
 public class IndustryFacilitiesProvider extends Provider<IndustryFacility> {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public IndustryFacilitiesProvider(File json) {
+    public IndustryFacilitiesProvider(InputStream json) {
         super(new JacksonDeserializer<>(json, IndustryFacility.class));
     }
 
