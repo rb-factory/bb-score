@@ -1,0 +1,36 @@
+[   
+    {
+        "id": "1",
+        "locations": ["STOKE-ON-TRENT", "WARRINGTON"]
+    }, {
+        "id": "2",
+        "locations": ["STOKE-ON-TRENT", "LEEK"]
+    }, {
+        "id": "3",
+        "locations": ["STOKE-ON-TRENT", "STONE"]
+    }, {
+        "id": "4",
+        "locations": ["LEEK", "BELPER"]
+    }, {
+        "id": "5",
+        "locations": ["BELPER", "DERBY"]
+    }, {
+        "id": "6",
+        "locations": ["DERBY", "NOTTINGHAM"]
+    }, {
+        "id": "7",
+        "locations": ["DERBY", "BURTON-ON-TRENT"]
+    }, {
+        "id": "8",
+        "locations": ["DERBY", "UTTOXETER"]
+    }, {
+        "id": "9",
+        "locations": ["STONE", "UTTOXETER"]
+    }, {
+        "id": "10",
+        "locations": ["STONE", "STAFFORD"]
+    }, {
+        "id": "11",
+        "locations": ["CANNOCK", "STAFFORD"]
+    }
+]
