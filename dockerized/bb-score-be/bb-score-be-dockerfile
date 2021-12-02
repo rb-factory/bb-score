@@ -1,0 +1,7 @@
+FROM openjdk:17
+
+WORKDIR /opt/app
+
+COPY . .
+
+CMD gradlew clean bootRun

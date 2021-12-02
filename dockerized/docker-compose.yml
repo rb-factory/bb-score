@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  bb-score-be:
+    build:
+      context: ./bb-score-be
+      dockerfile: bb-score-be-dockerfile
+    ports:
+     - 8080:8080
