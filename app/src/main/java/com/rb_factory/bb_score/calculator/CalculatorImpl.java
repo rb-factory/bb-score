@@ -3,18 +3,18 @@ package com.rb_factory.bb_score.calculator;
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import com.rb_factory.bb_score.Player;
-import com.rb_factory.bb_score.industry_facility.IndustryFacility;
-import com.rb_factory.bb_score.link.Link;
-import com.rb_factory.bb_score.location.Location;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.model.link.Link;
+import com.rb_factory.bb_score.model.location.Location;
 
 import java.util.*;
 
-public class BasicCalculator implements Calculator {
+public class CalculatorImpl implements Calculator {
     private HashMap<Player, Integer> scores = new HashMap<>();
     private final HashMap<String, Location> usedLocations;
     private final Set<Link> usedLinks;
 
-    public BasicCalculator(HashMap<String, Location> usedLocations, Set<Link> usedLinks) throws IllegalArgumentException {
+    public CalculatorImpl(HashMap<String, Location> usedLocations, Set<Link> usedLinks) throws IllegalArgumentException {
         if (usedLocations == null || usedLinks == null) throw new IllegalArgumentException();
         this.usedLocations = usedLocations;
         this.usedLinks = usedLinks;

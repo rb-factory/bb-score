@@ -1,7 +1,8 @@
-package com.rb_factory.bb_score.industry_facility;
+package com.rb_factory.bb_score.model.industry_facility;
 
-import com.rb_factory.bb_score.Provider;
-import com.rb_factory.bb_score.deserializer.JacksonDeserializer;
+import com.rb_factory.bb_score.importer.Importer;
+import com.rb_factory.bb_score.importer.IndustryFacilitiesImporter;
+import com.rb_factory.bb_score.importer.deserializer.JacksonDeserializer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-class IndustryFacilitiesProviderTest {
+class IndustryFacilitiesImporterTest {
     private static final String coal_mine_1 = "[{\n" +
             "        \"type\": \"COAL_MINE\",\n" +
             "        \"level\": 1,\n" +
@@ -22,22 +23,22 @@ class IndustryFacilitiesProviderTest {
             "        \"linkPoint\": 1\n" +
             "    }\n" +
             "]\n";
-    private Provider<IndustryFacility> provider;
+    private Importer<IndustryFacility> importer;
 
     @BeforeEach
     void setUp() {
         JacksonDeserializer<IndustryFacility> deserializer = new JacksonDeserializer<IndustryFacility>(coal_mine_1, IndustryFacility.class);
-        provider = new IndustryFacilitiesProvider(new File(coal_mine_1));
+        importer = new IndustryFacilitiesImporter(new File(coal_mine_1));
     }
 
     @AfterEach
     void tearDown() {
-        provider = null;
+        importer = null;
     }
 
     @Test
     void whenIDInsertedPOJOisGiven() {
         IndustryFacility expected = new IndustryFacility(IndustryFacilityType.COAL_MINE, 1, 1, 1);
-        Assertions.assertEquals(expected, provider.get("COAL_MINE_1"));
+        Assertions.assertEquals(expected, importer.get("COAL_MINE_1"));
     }
 }

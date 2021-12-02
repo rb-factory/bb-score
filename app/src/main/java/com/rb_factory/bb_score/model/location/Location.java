@@ -1,12 +1,12 @@
-package com.rb_factory.bb_score.location;
+package com.rb_factory.bb_score.model.location;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import com.rb_factory.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.rb_factory.bb_score.exception.NoOwnerAssignedException;
 import com.rb_factory.bb_score.exception.NoSuchIndustryFacilityTypeAtLocation;
-import com.rb_factory.bb_score.industry_facility.IndustryFacility;
-import com.rb_factory.bb_score.industry_facility.IndustryFacilityType;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacilityType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.*;
@@ -19,8 +19,7 @@ public class Location {
 
     private final Set<IndustryFacility> industryFacilities = new HashSet<>();
 
-    public Location() {
-    }
+    public Location() {}
 
     public Location(String name, IndustryFacilityType[][] slots) {
         this.name = name;

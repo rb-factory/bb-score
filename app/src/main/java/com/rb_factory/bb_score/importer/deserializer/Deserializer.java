@@ -1,4 +1,4 @@
-package com.rb_factory.bb_score.deserializer;
+package com.rb_factory.bb_score.importer.deserializer;
 
 
 import java.util.List;

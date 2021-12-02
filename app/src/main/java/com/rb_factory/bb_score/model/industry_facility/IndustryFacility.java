@@ -1,15 +1,16 @@
-package com.rb_factory.bb_score.industry_facility;
+package com.rb_factory.bb_score.model.industry_facility;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
 import com.rb_factory.bb_score.Player;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.rb_factory.bb_score.model.Countable;
 
 import java.util.Objects;
 import java.util.Optional;
 import java.util.StringJoiner;
 
-public class IndustryFacility {
+public class IndustryFacility implements Countable {
     @JsonProperty("type")
     private IndustryFacilityType type;
     @JsonProperty("level")
@@ -20,8 +21,7 @@ public class IndustryFacility {
     private int linkPoint;
     private Optional<Player> owner;
 
-    public IndustryFacility() {
-    }
+    public IndustryFacility() {}
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public IndustryFacility(IndustryFacilityType type, int level, int basePoint, int linkPoint) {
@@ -42,7 +42,9 @@ public class IndustryFacility {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public String getID() {
-        return new StringJoiner("_").add(type.name()).add(String.valueOf(level)).toString();
+        return new StringJoiner("_")
+                .add(type.name())
+                .add(String.valueOf(level)).toString();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -79,5 +81,10 @@ public class IndustryFacility {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void setOwner(Player owner) {
         this.owner = Optional.ofNullable(owner);
+    }
+
+    @Override
+    public int getPoint() {
+        return basePoint;
     }
 }

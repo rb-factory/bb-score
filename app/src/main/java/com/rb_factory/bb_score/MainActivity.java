@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.*;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import com.rb_factory.bb_score.industry_facility.IndustryFacility;
-import com.rb_factory.bb_score.location.Location;
+import com.rb_factory.bb_score.model.location.Location;
 import org.apache.commons.lang3.StringUtils;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -46,22 +45,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         searchAutoComplete.setOnItemSelectedListener(this);
     }
 
-    private void buildFacilityLayout(Location location) {
-        LinearLayout vertical = findViewById(R.id.vertical_layout);
-
-
-        for (IndustryFacility industryFacility : location.getIndustryFacilities()) {
-            LinearLayout horizontal = new LinearLayout(this);
-            TextView name = new TextView(this);
-            name.setText(industryFacility.getType().toString());
-            horizontal.addView(name);
-
-
-        }
-        //vertical.addView(horizontal);
-
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

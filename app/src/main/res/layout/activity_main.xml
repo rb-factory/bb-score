@@ -8,7 +8,7 @@
         tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:layout_height="wrap_content"
+            android:layout_height="83dp"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
@@ -18,14 +18,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btn_addLocation"/>
         <AutoCompleteTextView
-                android:text="AutoCompleteTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/view_search"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/vertical_layout"/>
 
     </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="TextView"
+                android:layout_width="379dp"
+                android:layout_height="52dp" android:id="@+id/textView4" tools:layout_editor_absoluteY="108dp"
+                tools:layout_editor_absoluteX="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

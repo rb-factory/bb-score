@@ -172,5 +172,11 @@
     "level": 4,
     "basePoint": 4,
     "linkPoint": 1
+  },
+  {
+    "type": "MERCHANT_POINT",
+    "level": 0,
+    "basePoint": 0,
+    "linkPoint": 2
   }
 ]

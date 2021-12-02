@@ -1,4 +1,4 @@
-package com.rb_factory.bb_score.industry_facility;
+package com.rb_factory.bb_score.model.industry_facility;
 
 public enum IndustryFacilityType {
     MANUFACTURER,
@@ -6,5 +6,6 @@ public enum IndustryFacilityType {
     BREWERY,
     POTTERY,
     IRON_WORK,
-    COAL_MINE
+    COAL_MINE,
+    MERCHANT_POINT
 }

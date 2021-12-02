@@ -5,12 +5,11 @@ import android.content.res.AssetManager;
 import android.os.Build;
 import android.text.Editable;
 import androidx.annotation.RequiresApi;
-import com.rb_factory.bb_score.industry_facility.IndustryFacilitiesProvider;
-import com.rb_factory.bb_score.link.LinksProvider;
-import com.rb_factory.bb_score.location.Location;
-import com.rb_factory.bb_score.location.LocationsProvider;
+import com.rb_factory.bb_score.importer.IndustryFacilitiesImporter;
+import com.rb_factory.bb_score.importer.LinksImporter;
+import com.rb_factory.bb_score.model.location.Location;
+import com.rb_factory.bb_score.importer.LocationsImporter;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -19,9 +18,9 @@ public class Controller {
     private final HashMap<Player, Integer> scores = new HashMap<Player, Integer>();
     private AssetManager assets;
 
-    private IndustryFacilitiesProvider industryFacilitiesProvider;
-    private LinksProvider linkProvider;
-    private LocationsProvider locationProvider;
+    private IndustryFacilitiesImporter industryFacilitiesProvider;
+    private LinksImporter linkProvider;
+    private LocationsImporter locationProvider;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Controller(Context context) {
@@ -60,17 +59,17 @@ public class Controller {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadLocations() throws IOException {
-        this.locationProvider = new LocationsProvider(assets.open("Locations.json"));
+        this.locationProvider = new LocationsImporter(assets.open("Locations.json"));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadLinks() throws IOException {
-        this.linkProvider = new LinksProvider(assets.open("Links.json"));
+        this.linkProvider = new LinksImporter(assets.open("Links.json"));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void loadIndustryFacilities() throws IOException {
-        this.industryFacilitiesProvider = new IndustryFacilitiesProvider(assets.open("IndustryFacilities.json"));
+        this.industryFacilitiesProvider = new IndustryFacilitiesImporter(assets.open("IndustryFacilities.json"));
     }
 
     public String[] getActivePlayers() {

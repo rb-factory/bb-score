@@ -6,5 +6,5 @@ import java.util.Map;
 
 public interface Calculator {
 
-    public Map<Player, Integer> calculatePoints();
+    Map<Player, Integer> calculatePoints();
 }

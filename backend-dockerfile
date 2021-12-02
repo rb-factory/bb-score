@@ -1,0 +1,7 @@
+FROM gradle:jdk-17
+
+WORDIR /opt/build
+
+COPY . .
+
+CMD gradlew clean build

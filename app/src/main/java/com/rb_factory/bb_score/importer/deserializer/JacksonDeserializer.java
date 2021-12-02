@@ -1,4 +1,4 @@
-package com.rb_factory.bb_score.deserializer;
+package com.rb_factory.bb_score.importer.deserializer;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
@@ -8,8 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class JacksonDeserializer<T> implements Deserializer<T> {

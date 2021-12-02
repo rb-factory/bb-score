@@ -1,9 +1,9 @@
-package com.rb_factory.bb_score.deserializer;
+package com.rb_factory.bb_score.importer.deserializer;
 
-import com.rb_factory.bb_score.industry_facility.IndustryFacility;
-import com.rb_factory.bb_score.industry_facility.IndustryFacilityType;
-import com.rb_factory.bb_score.link.Link;
-import com.rb_factory.bb_score.location.Location;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacilityType;
+import com.rb_factory.bb_score.model.link.Link;
+import com.rb_factory.bb_score.model.location.Location;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.util.List;
 
-import static com.rb_factory.bb_score.industry_facility.IndustryFacilityType.*;
+import static com.rb_factory.bb_score.model.industry_facility.IndustryFacilityType.*;
 
 class JacksonDeserializerTest {
     private JacksonDeserializer<?> deserializer;

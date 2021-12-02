@@ -1,25 +1,25 @@
-package com.rb_factory.bb_score.industry_facility;
+package com.rb_factory.bb_score.importer;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import com.rb_factory.bb_score.Provider;
-import com.rb_factory.bb_score.deserializer.JacksonDeserializer;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.importer.deserializer.JacksonDeserializer;
 
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class IndustryFacilitiesProvider extends Provider<IndustryFacility> {
+public class IndustryFacilitiesImporter extends Importer<IndustryFacility> {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public IndustryFacilitiesProvider(InputStream json) {
+    public IndustryFacilitiesImporter(InputStream json) {
         super(new JacksonDeserializer<>(json, IndustryFacility.class));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
-    protected Map<String, IndustryFacility> loadData() {
+    protected Map<String, IndustryFacility> importData() {
         Map<String, IndustryFacility> map = new HashMap<>();
         List<IndustryFacility> elements = deserializer.get();
         for (IndustryFacility element : elements) {

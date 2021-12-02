@@ -1,4 +1,4 @@
-package com.rb_factory.bb_score.link;
+package com.rb_factory.bb_score.model.link;
 
 import com.rb_factory.bb_score.Player;
 import org.junit.jupiter.api.AfterEach;

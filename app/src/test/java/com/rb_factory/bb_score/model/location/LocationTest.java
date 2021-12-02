@@ -1,20 +1,19 @@
-package com.rb_factory.bb_score.location;
+package com.rb_factory.bb_score.model.location;
 
 import com.rb_factory.bb_score.Player;
 import com.rb_factory.bb_score.exception.NoMoreIndustryFacilityPlaceAtLocationException;
 import com.rb_factory.bb_score.exception.NoOwnerAssignedException;
 import com.rb_factory.bb_score.exception.NoSuchIndustryFacilityTypeAtLocation;
-import com.rb_factory.bb_score.industry_facility.IndustryFacility;
-import com.rb_factory.bb_score.industry_facility.IndustryFacilityType;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacility;
+import com.rb_factory.bb_score.model.industry_facility.IndustryFacilityType;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Map;
 import java.util.Optional;
 
-import static com.rb_factory.bb_score.industry_facility.IndustryFacilityType.*;
+import static com.rb_factory.bb_score.model.industry_facility.IndustryFacilityType.*;
 
 class LocationTest {
     private Location location1;

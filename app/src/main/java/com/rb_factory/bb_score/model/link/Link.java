@@ -1,14 +1,14 @@
-package com.rb_factory.bb_score.link;
+package com.rb_factory.bb_score.model.link;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import com.rb_factory.bb_score.Element;
 import com.rb_factory.bb_score.Player;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 import java.util.Optional;
 
+@RequiresApi(api = Build.VERSION_CODES.N)
 public class Link {
     @JsonProperty("id")
     private String id;
@@ -16,10 +16,9 @@ public class Link {
     @JsonProperty("locations")
     private String[] locations;
 
-    private Optional<Player> owner;
+    private Optional<Player> owner = Optional.empty();
 
-    public Link() {
-    }
+    public Link() {}
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public Link(String id) {
@@ -29,10 +28,7 @@ public class Link {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public Optional<Player> getOwner() {
-        if(owner.isPresent())
-            return owner;
-        else
-            return Optional.empty();
+        return owner;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
