@@ -1,6 +1,6 @@
 package com.rbfactory.bbscore.model;
 
-import com.rbfactory.bbscore.model.Player;
+import com.rbfactory.bbscore.PlayerColor;
 import com.rbfactory.bbscore.model.link.Link;
 import com.rbfactory.bbscore.model.location.Location;
 
@@ -9,10 +9,10 @@ import java.util.Map;
 
 public class Game {
     private final Map<Location, List<Link>> locations;
-    private final Map<Integer, Player> scores;
+    private final Map<Integer, PlayerColor> scores;
 
 
-    public Game(Map<Location, List<Link>> locations, Map<Integer, Player> scores) {
+    public Game(Map<Location, List<Link>> locations, Map<Integer, PlayerColor> scores) {
         this.locations = locations;
         this.scores = scores;
     }
@@ -21,7 +21,7 @@ public class Game {
         return locations.get(location);
     }
 
-    public Map<Integer, Player> getScores() {
+    public Map<Integer, PlayerColor> getScores() {
         return scores;
     }
 

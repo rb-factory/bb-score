@@ -1,14 +1,11 @@
 package com.rbfactory.bbscore.model.link;
 
-import android.os.Build;
-import androidx.annotation.RequiresApi;
-import com.rbfactory.bbscore.Player;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.rbfactory.bbscore.Player;
 
 import java.util.Objects;
 import java.util.Optional;
 
-@RequiresApi(api = Build.VERSION_CODES.N)
 public class Link {
     @JsonProperty("id")
     private String id;

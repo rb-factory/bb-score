@@ -2,7 +2,7 @@ package com.rbfactory.bbscore.model.industry_facility;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.rbfactory.bbscore.model.Countable;
-import com.rbfactory.bbscore.model.Player;
+import com.rbfactory.bbscore.PlayerColor;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -17,7 +17,7 @@ public class IndustryFacility implements Countable {
     private int basePoint;
     @JsonProperty("linkPoint")
     private int linkPoint;
-    private Optional<Player> owner;
+    private Optional<PlayerColor> owner;
 
     public IndustryFacility() {
     }
@@ -47,7 +47,7 @@ public class IndustryFacility implements Countable {
     }
 
 
-    public Optional<Player> getOwner() {
+    public Optional<PlayerColor> getOwner() {
         if (owner.isPresent()) {
             return owner;
         } else {
@@ -78,7 +78,7 @@ public class IndustryFacility implements Countable {
     }
 
 
-    public void setOwner(Player owner) {
+    public void setOwner(PlayerColor owner) {
         this.owner = Optional.ofNullable(owner);
     }
 
