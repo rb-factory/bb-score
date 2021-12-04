@@ -1,28 +1,33 @@
 package com.rbfactory.bbscore.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.rbfactory.bbscore.model.link.Link;
+import com.rbfactory.bbscore.service.link.LinkService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/link")
+@RequestMapping("/api")
+@RequiredArgsConstructor
 public class LinkController {
+    public static final String ALL_LINK_ENDPOINT = "/links";
+    public static final String SINGLE_LINK_ENDPOINT = "/link";
 
-    @GetMapping("")
-    public List<Object> getLinks(){
-        throw new UnsupportedOperationException();
+    private final LinkService linkService;
+
+    @GetMapping(ALL_LINK_ENDPOINT)
+    public List<Link> getLinks(){
+        return linkService.getAllLink();
     }
 
-    @GetMapping("")
-    public Object getLink(int id){
-        throw new UnsupportedOperationException();
+    @GetMapping(SINGLE_LINK_ENDPOINT)
+    public Link getLink(@RequestParam int id){
+        return linkService.getLink(id);
     }
 
-    @PostMapping("")
-    public void updateLink(Object link){
-        throw new UnsupportedOperationException();
+    @PostMapping(SINGLE_LINK_ENDPOINT)
+    public void updateLink(@RequestParam Link link){
+        linkService.updateLink(link);
     }
 }

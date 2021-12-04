@@ -13,24 +13,23 @@ public class Link {
     @JsonProperty("locations")
     private String[] locations;
 
-    private Optional<Player> owner = Optional.empty();
+    private Player owner;
 
     public Link() {}
 
 
     public Link(String id) {
         this.id = id;
-        this.owner = Optional.empty();
     }
 
 
     public Optional<Player> getOwner() {
-        return owner;
+        return Optional.ofNullable(owner);
     }
 
 
     public void setOwner(Player owner) {
-        this.owner = Optional.of(owner);
+        this.owner = owner;
     }
 
     public String getID() {
