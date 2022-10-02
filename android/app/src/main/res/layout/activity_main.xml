@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:android/app/src/main/res/layout/activity_main.xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -28,4 +29,43 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity" android:visibility="visible">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/appBarLayout">
+
+        android:onclick=
+        <Button
+                android:text="Add "
+                android:layout_width="match_parent"
+                android:layout_height="359dp" android:id="@+id/btn_addLocation"/>
+        <AutoCompleteTextView
+                android:layout_width="167dp"
+                android:layout_height="107dp" android:id="@+id/view_search"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editTextTextPersonName"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+>>>>>>> Stashed changes:app/src/main/res/layout/activity_main.xml
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
